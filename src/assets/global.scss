@@ -1,0 +1,51 @@
+// @mixin fixedcenter($location) {
+//   position: fixed;
+//   $location: 0;
+//   left: 0;
+//   right: 0;
+//   margin: 0 auto;
+// }
+$width: 40rem;
+$active-color: #42b983;
+$header-color: #42b983;
+@mixin fixedtopcenter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+@mixin fixedbottomcenter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+@mixin mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: $width;
+  height: 100%;
+  background-color: rgba(0, 0n, 0, .4);
+}
+
+@mixin top-triangle($len) {
+  border: $len solid transparent;
+  border-bottom-color: #fff;
+}
+
+header.fixed {
+  @include fixedtopcenter();
+  max-width: $width;
+  background-color: $header-color;
+}
+
+li {
+  list-style: none;
+}
